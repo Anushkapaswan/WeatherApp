@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple Weather App</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Weather App 🌤️</h1>
+
+      <div class="search">
+        <input
+          id="cityInput"
+          placeholder="Enter city (e.g., London or Mumbai)"
+        />
+        <button id="searchBtn">Get Weather</button>
+      </div>
+
+      <div id="error" class="error"></div>
+
+      <div id="result" class="result hidden">
+        <div class="current card">
+          <h2 id="location"></h2>
+          <div id="currentSummary">
+            <div class="largeTemp" id="temp"></div>
+            <div class="desc" id="description"></div>
+          </div>
+          <div class="meta">
+            <div>Feels like: <span id="feels"></span>°C</div>
+            <div>Humidity: <span id="humidity"></span>%</div>
+            <div>Wind: <span id="wind"></span> m/s</div>
+          </div>
+        </div>
+
+        <div class="forecast card">
+          <h3>5-day Forecast (daily)</h3>
+          <div id="forecastGrid" class="forecastGrid"></div>
+        </div>
+      </div>
+
+      <footer>
+        <small
+          >Uses OpenWeatherMap (free). Backend proxies requests to keep API key
+          secret.</small
+        >
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

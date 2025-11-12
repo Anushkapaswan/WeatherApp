@@ -1,0 +1,82 @@
+/* style.css - simple styling */
+:root {
+  --bg: #f3f7fb;
+  --card: #ffffff;
+  --accent: #2b8cff;
+  --muted: #555;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #e8f0ff);
+  margin: 0;
+  padding: 20px;
+  color: #111;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 { text-align: center; margin-bottom: 12px; }
+
+.search {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.search input {
+  padding: 10px;
+  width: 60%;
+  border-radius: 6px;
+  border: 1px solid #cfd8e3;
+}
+.search button {
+  padding: 10px 16px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 4px 14px rgba(30,50,80,0.05);
+  margin-bottom: 14px;
+}
+
+.current .largeTemp {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.current .desc { font-size: 16px; color: var(--muted); margin-top: 6px; }
+
+.meta { display:flex; gap: 14px; margin-top: 10px; color: #333; }
+
+.forecastGrid {
+  display:flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+.day {
+  min-width: 120px;
+  padding: 10px;
+  border-radius: 8px;
+  background: linear-gradient(180deg,#fff,#f7fbff);
+  text-align: center;
+}
+.day .date { font-weight: 600; margin-bottom: 6px; }
+.day .t { font-size: 20px; margin-top: 8px; color: var(--accent); }
+
+.hidden { display:none; }
+.error { color: red; text-align:center; margin-bottom:10px; }
+footer { text-align:center; margin-top:8px; color:var(--muted); font-size:13px; }
